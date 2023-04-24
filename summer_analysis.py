@@ -197,10 +197,9 @@ with col1:
         st.table(x)
 
 with col2:
-    url = 'https://pankhuri1304-front-front-85jphc.streamlit.app/'
-
     if st.button('Home'):
-        webbrowser.open(url, new=0)
+        link = '<a href="https://pankhuri1304-front-front-85jphc.streamlit.app/" target="_self">Home</a>'
+        st.markdown(link, unsafe_allow_html=True)
 
 if user_menu == "Overall Analysis":
     editions = df['Year'].unique().shape[0]
